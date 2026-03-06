@@ -1,57 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HeritageBackend;
+﻿namespace HeritageBackend;
 
 public class Triangle : Rectangle
 {
     // Fields
-    private float _c;
-    private float _h;
+    private double _c;
+    private double _h;
 
     // Constructors
-    public Triangle(float a, float b, float c, float h) : base(a, b)
+    public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
     {
-        Name = "Triangle";
+        Name = name;
         C = c;
         H = h;
     }
 
     // Properties
-    public float C
+    public double C
     {
         get { return _c; }
         set { _c = ValidateC(value); }
     }
 
-    public float H
+    public double H
     {
         get { return _h; }
         set { _h = ValidateH(value); }
     }
 
     // Methods
-    public override float GetArea()
+    public override double GetArea()
     {
         return (A * _h) / 2;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
         return A + B + _c;
     }
 
-    private float ValidateC(float c)
+    private double ValidateC(double c)
     {
         if (c <= 0)
             throw new ArgumentException("El lado C debe ser mayor que 0");
         return c;
     }
 
-    private float ValidateH(float h)
+    private double ValidateH(double h)
     {
         if (h <= 0)
             throw new ArgumentException("La altura debe ser mayor que 0");

@@ -1,12 +1,13 @@
 ﻿namespace HeritageBackend;
+
 public abstract class GeometricFigure
 {
     // Properties
     public string Name { get; set; } = string.Empty;
 
     // Methods
-    public abstract float GetArea();
-    public abstract float GetPerimeter();
+    public abstract double GetArea();
+    public abstract double GetPerimeter();
 
     public override string ToString()
     {

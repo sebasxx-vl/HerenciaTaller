@@ -1,44 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace HeritageBackend;
 
-namespace HeritageBackend;
 public class Square : GeometricFigure
 {
     // Fields
-    private float _a;
+    private double _a;
 
     // Constructors
-    public Square(float A)
+    public Square(string name, double a)
     {
-        Name = "Square";
-        A = _a;
+        Name = name;
+        A = a;
     }
 
     // Properties
-    public float A 
+    public double A
     {
         get { return _a; }
-        set { _a = ValidateA(value); } 
+        set { _a = ValidateA(value); }
     }
 
     // Methods
-    public override float GetArea()
+    public override double GetArea()
     {
         return _a * _a;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
         return 4 * _a;
     }
 
-    private float ValidateA(float A)
+    private double ValidateA(double a)
     {
-        if (A <= 0)
-            throw new ArgumentException("El radio debe ser mayor que 0");
-        return A;
+        if (a <= 0)
+            throw new ArgumentException("El lado debe ser mayor que 0");
+        return a;
     }
 }

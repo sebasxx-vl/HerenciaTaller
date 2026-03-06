@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="HeritageBackend/HeritageBackend.csproj" Id="92a2a06c-e7a2-4230-b036-3797123403fc" />
+  <Project Path="HeritageFrontend/HeritageFrontend.csproj" Id="2bfe490b-7c53-4dec-926d-3a9cf4c25978" />
 </Solution>

@@ -42,13 +42,6 @@
       <FileName>Rectangle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HeritageBackend.Parallelogram">
-    <Position X="4.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAGEAAAAA=</HashCode>
-      <FileName>Parallelogram.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="HeritageBackend.Triangle">
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -61,6 +54,13 @@
     <TypeIdentifier>
       <HashCode>AAAAgAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAFAAAAAA=</HashCode>
       <FileName>Trapeze.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeritageBackend.Parallelogram">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAGEAAAAA=</HashCode>
+      <FileName>Parallelogram.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

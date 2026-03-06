@@ -1,46 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace HeritageBackend;
 
-namespace HeritageBackend;
 public class Parallelogram : Rectangle
 {
     // Fields
-    private float _h;
+    private double _h;
 
     // Constructors
-    public Parallelogram(float a, float b, float h) : base(a, b)
+    public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
     {
-        Name = "Parallelogram";
+        Name = name;
         H = h;
     }
 
     // Properties
-    public float H 
+    public double H
     {
-        get {return _h; }
-        set {_h = ValidateH(value); } 
+        get { return _h; }
+        set { _h = ValidateH(value); }
     }
 
     // Methods
-    public override float GetArea()
+    public override double GetArea()
     {
         return B * _h;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
         return 2 * (A + B);
     }
 
-    private float ValidateH(float h)
+    private double ValidateH(double h)
     {
         if (h <= 0)
-        {
             throw new ArgumentException("La altura debe ser mayor que 0");
-        }
         return h;
     }
 }

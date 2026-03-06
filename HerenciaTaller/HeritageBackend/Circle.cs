@@ -1,35 +1,36 @@
 ﻿namespace HeritageBackend;
+
 public class Circle : GeometricFigure
 {
     // Fields
-    private float _r;
+    private double _r;
 
     // Constructors
-    public Circle(float r)
+    public Circle(string name, double r)
     {
-        Name = "Circle";
+        Name = name;
         R = r;
     }
 
     // Properties
-    public float R
+    public double R
     {
         get { return _r; }
         set { _r = ValidateR(value); }
     }
 
     // Methods
-    public override float GetArea()
+    public override double GetArea()
     {
-        return MathF.PI * _r * _r;
+        return Math.PI * _r * _r;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
-        return 2 * MathF.PI * _r;
+        return 2 * Math.PI * _r;
     }
 
-    private float ValidateR(float r)
+    private double ValidateR(double r)
     {
         if (r <= 0)
             throw new ArgumentException("El radio debe ser mayor que 0");

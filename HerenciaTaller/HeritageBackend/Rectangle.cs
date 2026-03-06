@@ -1,47 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.PortableExecutable;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace HeritageBackend;
 
-namespace HeritageBackend;
 public class Rectangle : Square
 {
     // Fields
-    private float _b;
+    private double _b;
 
     // Constructors
-    public Rectangle (float a, float _b) : base(1)
+    public Rectangle(string name, double a, double b) : base(name, a)
     {
-        Name = "Rectangle";
-        B = _b;
+        Name = name;
+        B = b;
     }
 
     // Properties
-    public float B 
+    public double B
     {
         get { return _b; }
-        set { _b = ValidateB(value); } 
+        set { _b = ValidateB(value); }
     }
 
-    //Methods
-    public override float GetArea()
+    // Methods
+    public override double GetArea()
     {
         return A * _b;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
         return 2 * (A + _b);
     }
 
-    private float ValidateB(float b)
+    private double ValidateB(double b)
     {
         if (b <= 0)
-        {
             throw new ArgumentException("El lado B debe ser mayor que 0");
-        }
         return b;
     }
 }

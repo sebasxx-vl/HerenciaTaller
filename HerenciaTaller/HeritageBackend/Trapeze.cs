@@ -1,41 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace HeritageBackend;
 
-namespace HeritageBackend;
 public class Trapeze : Triangle
 {
     // Fields
-    private float _d;
+    private double _d;
 
     // Constructors
-    public Trapeze(float a, float b, float c, float h, float d) : base(a, b, c, h)
+    public Trapeze(string name, double a, double b, double c, double d, double h) : base(name, a, b, c, h)
     {
-        Name = "Trapeze";
+        Name = name;
         D = d;
     }
 
     // Properties
-    public float D
+    public double D
     {
         get { return _d; }
         set { _d = ValidateD(value); }
     }
 
     // Methods
-    public override float GetArea()
+    public override double GetArea()
     {
         return ((A + B) * H) / 2;
     }
 
-    public override float GetPerimeter()
+    public override double GetPerimeter()
     {
         return A + B + C + _d;
     }
 
-    private float ValidateD(float d)
+    private double ValidateD(double d)
     {
         if (d <= 0)
             throw new ArgumentException("El lado D debe ser mayor que 0");
