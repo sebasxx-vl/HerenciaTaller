@@ -2,14 +2,8 @@
 
 public abstract class GeometricFigure
 {
-    // Constructors
-    protected GeometricFigure()
-    {
-        Name = string.Empty;
-    }
-
     // Properties
-    public string Name { get; set; }
+    public string Name { get; set; } = string.Empty;
 
     // Methods
     public abstract float GetArea();

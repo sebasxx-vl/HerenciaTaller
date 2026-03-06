@@ -18,5 +18,28 @@ public class Square : GeometricFigure
         A = _a;
     }
 
+    // Properties
+    public float A 
+    {
+        get { return _a; }
+        set { _a = ValidateA(value); } 
+    }
 
+    // Methods
+    public override float GetArea()
+    {
+        return _a * _a;
+    }
+
+    public override float GetPerimeter()
+    {
+        return 4 * _a;
+    }
+
+    private float ValidateA(float A)
+    {
+        if (A <= 0)
+            throw new ArgumentException("El radio debe ser mayor que 0");
+        return A;
+    }
 }

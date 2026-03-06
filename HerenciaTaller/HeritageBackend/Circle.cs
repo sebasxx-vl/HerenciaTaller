@@ -36,9 +36,4 @@ public class Circle : GeometricFigure
             throw new ArgumentException("El radio debe ser mayor que 0");
         return r;
     }
-
-    public override string ToString()
-    {
-        return $"{base.ToString()}, Radio: {_r}, Área: {GetArea():F2}";
-    }
 }
