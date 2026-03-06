@@ -12,7 +12,7 @@ public class Rectangle : Square
     private float _b;
 
     // Constructors
-    public Rectangle (float _b) : base(1)
+    public Rectangle (float a, float _b) : base(1)
     {
         Name = "Rectangle";
         B = _b;
@@ -36,12 +36,12 @@ public class Rectangle : Square
         return 2 * (A + _b);
     }
 
-    private float ValidateB(float B)
+    private float ValidateB(float b)
     {
-        if (B <= 0)
+        if (b <= 0)
         {
             throw new ArgumentException("El lado B debe ser mayor que 0");
         }
-        return B;
+        return b;
     }
 }
