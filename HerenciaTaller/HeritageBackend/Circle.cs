@@ -1,5 +1,4 @@
 ﻿namespace HeritageBackend;
-
 public class Circle : GeometricFigure
 {
     // Fields

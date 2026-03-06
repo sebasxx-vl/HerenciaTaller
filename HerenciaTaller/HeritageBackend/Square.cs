@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HeritageBackend;
-
 public class Square : GeometricFigure
 {
     // Fields

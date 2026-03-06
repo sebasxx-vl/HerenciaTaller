@@ -1,5 +1,4 @@
 ﻿namespace HeritageBackend;
-
 public abstract class GeometricFigure
 {
     // Properties
