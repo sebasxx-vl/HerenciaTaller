@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace HeritageBackend;
+﻿namespace HeritageBackend;
 
 public class Circle : GeometricFigure
 {
@@ -8,9 +6,10 @@ public class Circle : GeometricFigure
     private float _r;
 
     // Constructors
-    public Circle(float r) : base("Circle")
+    public Circle(float r)
     {
-        R = r; 
+        Name = "Circle";
+        R = r;
     }
 
     // Properties

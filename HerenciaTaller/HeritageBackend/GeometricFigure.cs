@@ -3,21 +3,18 @@
 public abstract class GeometricFigure
 {
     // Constructors
-    protected GeometricFigure(string name)
+    protected GeometricFigure()
     {
-        Name = name;
+        Name = string.Empty;
     }
 
     // Properties
-    public string Name
-    {
-        get;
-        set;
-    }
+    public string Name { get; set; }
 
     // Methods
     public abstract float GetArea();
     public abstract float GetPerimeter();
+
     public override string ToString()
     {
         return $"Figure: {Name}";
