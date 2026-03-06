@@ -30,7 +30,7 @@ public class Triangle : Rectangle
     // Methods
     public override double GetArea()
     {
-        return (A * _h) / 2;
+        return (B * _h) / 2;
     }
 
     public override double GetPerimeter()

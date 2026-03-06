@@ -27,7 +27,7 @@ public class Kite : Rhombus
 
     public override double GetPerimeter()
     {
-        return 2 * (D1 + B);
+        return 2 * (A + B);
     }
 
     private double ValidateB(double b)

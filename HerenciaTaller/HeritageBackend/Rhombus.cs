@@ -35,7 +35,7 @@ public class Rhombus : Square
 
     public override double GetPerimeter()
     {
-        return 4 * Math.Sqrt(Math.Pow(_d1 / 2, 2) + Math.Pow(_d2 / 2, 2));
+        return 4 * A;
     }
 
     private double ValidateD1(double d1)
